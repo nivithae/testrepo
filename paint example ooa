@@ -1,0 +1,57 @@
+abstract class Paint{
+    
+    abstract void colour();
+    int a=10;
+    
+}
+
+class Redpaint extends Paint{
+    
+   public void colour()
+    {
+        System.out.println("red colour");
+    }
+    
+}
+
+class Bluepaint extends Paint{
+      void colour()
+    {
+        System.out.println("blue colour");
+    }
+    
+}
+
+class Greenpaint extends Paint{
+      void colour()
+    {
+        System.out.println("green colour");
+    }
+    
+}
+
+class PaintBrush
+{
+    
+    
+    void dopaint(Paint p)
+    {
+        
+        System.out.print("Painting with");
+        p.colour();
+        //System.out.println(p.a);
+    }
+}
+public class Main{
+    
+    public static void main(String args[])
+    {
+        Redpaint rp=new Redpaint();
+        PaintBrush pb=new PaintBrush();
+      System.out.println(rp.a);
+        pb.dopaint(rp);
+    }
+}
+
+
+
